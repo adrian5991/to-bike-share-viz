@@ -64,7 +64,7 @@ class Data:
         return self.df
     
     def read_csv(self, file_name):
-        df1 = pd.read_csv(file_name, encoding="utf-8")
+        df1 = pd.read_csv(file_name, nrows=1000000, encoding="utf-8")
         df1["Start Time"] = pd.to_datetime(df1["Start Time"], errors="coerce", infer_datetime_format=True)
         df1["Trip  Duration"] = df1["Trip  Duration"].div(60)
         return df1        
