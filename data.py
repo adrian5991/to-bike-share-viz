@@ -81,7 +81,7 @@ class Data:
 
     def get_conn(self):
         try:
-            db_engine = create_engine('postgresql://ppqcoypsjysysj:0878f1373351607217b94c10cd613bdfd5bd1c79a1d4f0a227a73e7530d44e31@ec2-18-214-195-34.compute-1.amazonaws.com:5432/d8ak71hqd0om0b')
+            db_engine = create_engine('postgresql://')
     
             print('PostgreSQL database version:')
             vrs = db_engine.execute('SELECT version()')
